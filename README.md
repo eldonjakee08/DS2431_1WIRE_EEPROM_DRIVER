@@ -12,7 +12,7 @@ You might be wondering, why don't I just connect a 20V supply straight to a 4.5m
 
 You might see from the schematic above that the original supply uses DS2501 ID chip. My problem with this chip is that it's obsolete, is only one time programmable and needs a 12V pulse to be programmed, which I'd need to design a circuit that delivers 12V pulse into the IC which is quite inconvenient. So instead I opted to use the DS2431 chip because its more simple to operate/program (does not use a 12V pulse), not obsolete and the memory could be programmed multiple times.    
 
-The project in a nutshell is to fool the laptop into thinking that power coming from the power bank is from an "original" dell laptop power supply power. Which can be achieved by programming the ID chip (ds2431) to have the data of an original dell laptop power supply. e.g. voltage, wattage and serial number
+The project in a nutshell is to fool the laptop to think that it's being powered by an original dell laptop supply.
 
 PARTS NEEDED
 1. USB TYPE-C PD SPOOFER - to tell the PD 20V capable power bank or supply to output 20V
