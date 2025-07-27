@@ -1,23 +1,60 @@
 # DS2431_Driver_STM32F4
 This is a 1-Wire protocol driver for DS2431 chip, it is a 1024-Bit 1-Wire EEPROM, which are commonly used as ID chips on laptop power supplies. 
-I made this driver to read and program the memory of DS2431 to function as an ID Chip that will interface with a laptop power supply. 
+I made this driver to read and program the ds2431 to function as a Dell laptop supply ID chip for my laptop supply spoofer project. 
 
-The programmed chip will then be used for my "Dell Laptop Power Supply Spoofer" project which enables me to power my laptop with any kind of power supplies as long as it outputs 20V 65W. 
-Which in my case, I'll be using a type-C power bank that outputs USB PD 20V 65W. So it kinda works like a Type-C to 4.5mm DC Jack Adaptor (my laptop plug for power). 
+**HOW TO USE THE DRIVER**
 
-You might be wondering, why don't I just connect a 20V supply straight to a 4.5mm DC jack and feed it into my laptop? Well dell laptops has these ID chips (see schematic below) built-in their supplies which tells the laptop the voltage, wattage & serial number of the power supply. Without the ID chip the laptop cannot identify what voltage and wattage the power supply operates at, because of this the laptop will limit the amount of power being fed into it (for safety purposes) resulting in poor performance (underclocked). So even if you plug a 20V DC source it will limit the amount of current being drawn from the supply even if its capable of outputting 65W. In my experience the laptop limits the current to 800mA without the ID chip. 
+**OneWire_init():** 
+Configures the GPIO for a 1-Wire communication. Call this function first before calling other 1-Wire commands.
 
-The project in a nutshell is to fool the laptop to think that it's being powered by an original dell laptop supply.
+<img width="621" height="316" alt="image" src="https://github.com/user-attachments/assets/dcd44394-15c9-435b-b5d9-1978b2487c28" />
 
-![image](https://github.com/user-attachments/assets/64c0a8c2-bde8-43bd-9e35-ec83ddc094d3)
+**********************************************************************************************************
+**OneWire_ReadROM():**
+Reads and displays data from DS2431 EEPROM memory.
+* @param: uint16_t startaddress, start address of EEPROM read.
+* @param: size_t bytesToRead, number of bytes to read from start address.
+* @param: uint8_t *pdataBuffer, pointer to data buffer where read data will be stored.
+<img width="768" height="155" alt="image" src="https://github.com/user-attachments/assets/a546dbbe-2c8f-46cd-917d-ee26c8025621" />
 
 
-You might see from the schematic above that the original supply uses DS2501 ID chip. My problem with this chip is that it's obsolete, is only one time programmable and needs a 12V pulse to be programmed, which I'd need to design a circuit that delivers 12V pulse into the IC which is quite inconvenient. So instead I opted to use the DS2431 chip because its more simple to operate/program (does not use a 12V pulse), not obsolete and the memory could be programmed multiple times.    
+**********************************************************************************************************
+
+**OneWire_WriteMemory:**
+Writes data into DS2431 EEPROM memory.
+* @param: uint16_t startaddress, start address of EEPROM write.
+* @param: uint8_t *pdata, pointer to data source buffer.
+   
+
+**EEPROM WRITING GUIDELINES**
+1. Write in 8-byte chunks: You can only write full 8-byte rows at a time.
+2. Use 8-byte aligned addresses: Writes must start at addresses divisible by 8 (e.g., 0x00, 0x08, 0x10…).
+ <img width="474" height="107" alt="image" src="https://github.com/user-attachments/assets/a386769e-cade-4a4b-a397-8c0c7f263055" />
+ 
+ <img width="534" height="29" alt="image" src="https://github.com/user-attachments/assets/220ce1a0-e2e4-405d-9b88-e168e5086099" />
 
 
-PARTS NEEDED
-1. USB TYPE-C PD SPOOFER - to tell the PD 20V capable power bank or supply to output 20V
-2. DS2431 IC - to spoof the laptop into thinking that its a "dell laptop supply" 
-3. PCB
-4. Your brain to think and debug the project :D 
+**********************************************************************************************************
+
+
+**OneWire_WriteByte:**
+Writes a byte of data into the 1-Wire bus
+* @param: uint8_t byte, the byte to write to the bus.
+
+<img width="326" height="22" alt="image" src="https://github.com/user-attachments/assets/8c3f45d8-92ad-42b6-8474-09489ecfaf86" />
+
+**********************************************************************************************************
+**OneWire_Reset():**
+MCU sends a reset pulse to ds2431
+
+<img width="240" height="26" alt="image" src="https://github.com/user-attachments/assets/9a1224c9-ab93-4943-9512-b6fcc5cb6fdb" />
+
+**********************************************************************************************************
+**OneWire_ReadByte:**
+Reads a byte of data from 1-Wire bus.
+
+<img width="250" height="23" alt="image" src="https://github.com/user-attachments/assets/2fec2f8e-47e7-401d-95ee-6e06bf103297" />
+
+
+
 
