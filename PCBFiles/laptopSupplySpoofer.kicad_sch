@@ -438,145 +438,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R_Small_US"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0.762 0.508 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "R_Small_US"
-				(at 0.762 -1.016 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Resistor, small US symbol"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "r resistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "R_Small_US_1_1"
-				(polyline
-					(pts
-						(xy 0 1.524) (xy 1.016 1.143) (xy 0 0.762) (xy -1.016 0.381) (xy 0 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 1.016 -0.381) (xy 0 -0.762) (xy -1.016 -1.143) (xy 0 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 2.54 270)
-					(length 1.016)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 1.016)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Memory_EEPROM:DS2431"
+		(symbol "Memory_EEPROM:DS2431P"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -588,7 +450,7 @@
 					)
 				)
 			)
-			(property "Value" "DS2431"
+			(property "Value" "DS2431P"
 				(at 7.62 6.35 0)
 				(effects
 					(font
@@ -596,7 +458,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_SO_J-Lead:TSOC-6_3.76x3.94mm_P1.27mm"
 				(at 0 10.16 0)
 				(effects
 					(font
@@ -614,7 +476,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "1024-bit, 1-Wire® EEPROM chip, TO-92"
+			(property "Description" "1024-bit, 1-Wire® EEPROM chip, TSOC-6"
 				(at 0 15.24 0)
 				(effects
 					(font
@@ -632,7 +494,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "TSOC*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -641,7 +503,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "DS2431_1_1"
+			(symbol "DS2431P_1_1"
 				(rectangle
 					(start -7.62 5.08)
 					(end 7.62 -5.08)
@@ -665,6 +527,63 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -7.62 0 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -7.62 0 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -7.62 0 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1058,7 +977,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 73.66) (xy 124.46 73.66)
+			(xy 118.11 73.66) (xy 132.08 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1075,16 +994,6 @@
 			(type default)
 		)
 		(uuid "dfd9e7f0-e7f1-4660-a1a3-20d6b4ad10a4")
-	)
-	(wire
-		(pts
-			(xy 129.54 73.66) (xy 132.08 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7c291d4-79ba-420d-8c0f-fcf9ea97cb41")
 	)
 	(wire
 		(pts
@@ -1105,74 +1014,6 @@
 			(type default)
 		)
 		(uuid "fffac90f-c483-4cde-97c2-d82bb51fd0c5")
-	)
-	(symbol
-		(lib_id "Device:R_Small_US")
-		(at 127 73.66 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "22cbcaf9-64fd-40c4-9e23-6cf885766175")
-		(property "Reference" "R1"
-			(at 127 67.31 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "130"
-			(at 127 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 127 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, small US symbol"
-			(at 127 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a251e137-53a4-4a92-ace5-3a689a61b56d")
-		)
-		(pin "2"
-			(uuid "d6dba9ab-50e1-4155-b496-8988348807eb")
-		)
-		(instances
-			(project ""
-				(path "/1c7e6398-1e52-4c78-9b8c-ef1e64772bc1"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:+24V")
@@ -1241,7 +1082,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Memory_EEPROM:DS2431")
+		(lib_id "Memory_EEPROM:DS2431P")
 		(at 107.95 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1249,7 +1090,7 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "6ce33009-a1be-4877-892c-f7a1fe829171")
+		(uuid "33e4704a-227b-4886-9043-73dd293a1f14")
 		(property "Reference" "U1"
 			(at 107.95 63.5 0)
 			(effects
@@ -1258,7 +1099,7 @@
 				)
 			)
 		)
-		(property "Value" "DS2431"
+		(property "Value" "DS2431P"
 			(at 107.95 66.04 0)
 			(effects
 				(font
@@ -1266,7 +1107,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+		(property "Footprint" "Package_SO_J-Lead:TSOC-6_3.76x3.94mm_P1.27mm"
 			(at 107.95 63.5 0)
 			(effects
 				(font
@@ -1284,7 +1125,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1024-bit, 1-Wire® EEPROM chip, TO-92"
+		(property "Description" "1024-bit, 1-Wire® EEPROM chip, TSOC-6"
 			(at 107.95 58.42 0)
 			(effects
 				(font
@@ -1293,14 +1134,23 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "3f0c4fe7-b469-4486-a965-3b2a001b10c0")
+		(pin "6"
+			(uuid "b7ea7d3a-8085-450f-afa2-2aa1065fb6b5")
+		)
+		(pin "5"
+			(uuid "ab5637d7-fb18-43ad-8f70-668f81af9aa0")
+		)
+		(pin "4"
+			(uuid "036d696d-dd58-42b8-be47-ff839120ecca")
 		)
 		(pin "2"
-			(uuid "5094c217-24a6-43b6-931c-00b957d386be")
+			(uuid "76010a14-c767-41f8-949e-d06f990121b2")
+		)
+		(pin "1"
+			(uuid "3d24ba20-f634-4dec-8d8a-e8ec9c6aa393")
 		)
 		(pin "3"
-			(uuid "e5d105b0-d87c-4f0a-9cd2-793a7ec4f5ad")
+			(uuid "a2167a42-8775-487a-8eb9-3f95dfb5dd0e")
 		)
 		(instances
 			(project ""

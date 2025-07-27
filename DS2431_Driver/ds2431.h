@@ -11,20 +11,29 @@
 
 #include <stdint.h>
 #include "stm32f4xx_hal.h"
+#include <stdio.h>
+#include <string.h>
 
-
-
-#define ONE_WIRE_PORT GPIOA		//enter GPIO port used here
+//Onewire driver defines
+#define ONE_WIRE_GPIO_PORT GPIOA		//enter GPIO port used here
 #define ONE_WIRE_PIN GPIO_PIN_9	//enter the gpio pin used for 1 wire communication
 #define boundaryaddress 0x007F	//last address of page3
 
 void OneWire_Reset(void);
 void OneWire_WriteByte(uint8_t byte);
 uint8_t OneWire_ReadByte(void);
-void OneWire_WriteMemory(uint16_t address, uint8_t *pdata);
-void OneWire_ReadMemory(uint8_t address, size_t bytesToRead, uint8_t *pdataBuffer);
+void OneWire_WriteMemory(uint16_t startaddress, uint8_t *pdata);
+void OneWire_ReadMemory(uint16_t startaddress, size_t bytesToRead, uint8_t *pdataBuffer);
 void Read_ScratchPad(uint8_t *pdata);
 void Copy_ScratchPad();
+void OneWire_init(void);
+
+
+//microsecond delay function defines
+#define TIMER_INSTANCE 	TIM6	//modify if using a different timer
+#define TIMER_MAX  		0xFFFF	//modify to 0xFFFF if using 16bit timer
+
+extern void Error_Handler(void);
 
 
 
