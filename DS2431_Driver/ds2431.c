@@ -3,9 +3,6 @@
 
 #include "ds2431.h"
 
-
-
-
 static void displaydata(uint16_t startaddress, size_t bytesToRead, uint8_t *pdataBuffer);
 static void GPIOMode_Input(void);
 static void GPIOMode_Output(void);

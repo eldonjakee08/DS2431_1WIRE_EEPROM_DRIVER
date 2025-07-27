@@ -1,9 +1,4 @@
-/*
- * ds2502.h
- *
- *  Created on: Jun 6, 2025
- *      Author: eldon
- */
+
 
 #ifndef DS2431_DRIVER_DS2431_H_
 #define DS2431_DRIVER_DS2431_H_
