@@ -1,11 +1,17 @@
 # DS2431_Driver_STM32F4
-This is a 1-Wire protocol driver for DS2431 chip, it is a 1024-Bit 1-Wire EEPROM, which are commonly used as ID chips on laptop power supplies. 
-I made this driver to read and program the ds2431 to function as a Dell laptop supply ID chip for my laptop supply spoofer project. 
+This is a 1-Wire protocol driver for the DS2431 chip, a 1024-bit 1-Wire EEPROM commonly used as an ID chip in laptop power supplies. I developed this driver to read and program the DS2431, enabling it to function as a Dell laptop power supply ID chip for my laptop supply spoofer project.
+
+The driver is designed for STM32F4 MCUs. To port it to other STM32 families, you can modify the MCU-specific HAL header file and update the peripheral addresses in the ds2431.h file accordingly.
+
+<img width="857" height="578" alt="image" src="https://github.com/user-attachments/assets/083e8c6a-a2a7-4671-a7d8-13523d15c728" />
+
+
+Just make sure your MCU has a basic timer peripheral for microsecond delay functionality that the MCU needs to communicate with the EEPROM chip. 
 
 **HOW TO USE THE DRIVER**
 
 **OneWire_init():** 
-Configures the GPIO for a 1-Wire communication. Call this function first before calling other 1-Wire commands.
+Configures the GPIO and TIMER for a 1-Wire communication. Call this function first before calling other 1-Wire commands.
 
 <img width="621" height="316" alt="image" src="https://github.com/user-attachments/assets/dcd44394-15c9-435b-b5d9-1978b2487c28" />
 
