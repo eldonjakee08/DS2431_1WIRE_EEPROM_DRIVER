@@ -6,7 +6,7 @@ The driver is designed for STM32F446RE MCU. To port it to other STM32 families, 
 <img width="857" height="578" alt="image" src="https://github.com/user-attachments/assets/083e8c6a-a2a7-4671-a7d8-13523d15c728" />
 
 
-Make sure your MCU has a basic timer peripheral for microsecond delay functionality that the MCU needs to communicate with the EEPROM chip. 
+Make sure your MCU has a basic timer peripheral for microsecond delay functionality the MCU needs to communicate with the EEPROM chip. 
 
 # How To Use The Driver
 
