@@ -1,4 +1,4 @@
-# DS2431 1Wire EEPROM Driver
+# DS2431 1-Wire EEPROM Driver
 This is a 1-Wire protocol driver for the DS2431 chip, a 1024-bit 1-Wire EEPROM commonly used as an ID chip in laptop power supplies. I developed this driver to read and program the DS2431, enabling it to function as a Dell laptop power supply ID chip for my laptop supply spoofer project.
 
 The driver is designed for STM32F446RE MCU. To port it to other STM32 families, you can modify the MCU-specific HAL header file and update the peripheral addresses in the ds2431.h file accordingly.
