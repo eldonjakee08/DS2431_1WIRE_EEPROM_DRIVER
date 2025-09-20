@@ -8,7 +8,7 @@ The driver is designed for STM32F446RE MCU. To port it to other STM32 families, 
 
 Make sure your MCU has a basic timer peripheral for microsecond delay functionality that the MCU needs to communicate with the EEPROM chip. 
 
-# HOW TO USE THE DRIVER
+# How To Use The Driver
 
 **OneWire_init():** 
 Configures the GPIO and TIMER for a 1-Wire communication. Call this function first before calling other 1-Wire commands.
